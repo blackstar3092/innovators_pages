@@ -227,9 +227,9 @@ permalink: /code
     </div>
 
     <div class="btn-group">
-      <button id="clearBtn" class="secondary-btn">🗑️ Clear</button>
-      <button id="copyBtn" class="secondary-btn">📋 Copy Code</button>
-      <button id="runBtn" class="run-btn large primary">▶ Run Code</button>
+      <button id="clearBtn" class="secondary-btn">Clear</button>
+      <button id="copyBtn" class="secondary-btn">Copy Code</button>
+      <button id="runBtn" class="run-btn large primary">Run Code</button>
     </div>
   </div>
 
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const execTime = endTime - startTime;
         const output = result.output || "[no output]";
         outputDiv.textContent = output;
-        execTimeSpan.textContent = `⏱Execution time: ${execTime}ms`;
+        execTimeSpan.textContent = `Execution time: ${execTime}ms`;
       })
       .catch(err => {
         outputDiv.textContent = "Error: " + err.message;
