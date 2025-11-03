@@ -195,6 +195,22 @@ layout: opencs
           {% assign nextLesson = currentLesson | plus: 1 %}
           {% assign basePath = page.url | split: '/submodule_' | first %}
           
+          {% comment %} Determine max lessons for this mini-quest based on parent field {% endcomment %}
+          {% assign maxLessons = 6 %}
+          {% if page.parent == "Frontend Development" %}
+            {% assign maxLessons = 6 %}
+          {% elsif page.parent == "Backend Development" %}
+            {% assign maxLessons = 4 %}
+          {% elsif page.parent == "Data Visualization" %}
+            {% assign maxLessons = 2 %}
+          {% elsif page.parent == "Resume Building" %}
+            {% assign maxLessons = 6 %}
+          {% elsif page.parent == "AI Usage" %}
+            {% assign maxLessons = 4 %}
+          {% elsif page.parent == "Analytics/Admin" %}
+            {% assign maxLessons = 3 %}
+          {% endif %}
+          
           {% if currentLesson > 1 %}
           <a href="{{ basePath }}/submodule_{{ prevLesson }}/" class="nav-button nav-button-prev">
             <span class="nav-arrow">←</span>
@@ -204,7 +220,7 @@ layout: opencs
           <div style="width: 200px;"></div>
           {% endif %}
 
-          {% if currentLesson < 6 %}
+          {% if currentLesson < maxLessons %}
           <a href="{{ basePath }}/submodule_{{ nextLesson }}/" id="next-lesson-btn" class="nav-button nav-button-next nav-button-disabled" aria-disabled="true">
             <span class="nav-text">Next Lesson</span>
             <span class="nav-arrow">→</span>
