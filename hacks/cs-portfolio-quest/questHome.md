@@ -25,7 +25,7 @@ lxdData:
       Description: "Learn about database structures, types, and integration with frontend for real-world full-stack development"
       Categories: ["Backend", "Flask", "Spring", "Databases"]
       Lessons: "/cs-portfolio-quest/backend/"
-      LessonCount: 6
+      LessonCount: 4
       Image: "/images/cs-portfolio-quest/backend/backendmain.png"
       Alt: "CS Portfolio Quest Backend"
     - Title: "C3: Data Visualization"
