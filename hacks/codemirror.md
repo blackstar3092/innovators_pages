@@ -64,6 +64,7 @@ permalink: /code
 
   select {
     min-width: 150px;
+    color: white;
   }
 
   .btn-group {
